@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Argent CF", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .font-argent {
+    font-family: "Argent CF", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  :root {
+    /* Vintage color palette */
+    --vintage-light: #f8f6f0;
+    --vintage-dark: #1a1a1a;
+    --vintage-paper: rgba(255, 255, 255, 0.8);
+    --vintage-paper-dark: rgba(40, 40, 40, 0.8);
+    --vintage-paper-hover: rgba(255, 255, 255, 0.9);
+    --vintage-paper-hover-dark: rgba(50, 50, 50, 0.9);
+    --vintage-text-dark: #2c2c2c;
+    --vintage-text-light: #f0f0f0;
+    --vintage-text-muted: #6b6b6b;
+    --vintage-text-muted-dark: #a0a0a0;
+    --vintage-border: #d4d4d4;
+    --vintage-border-dark: #404040;
+    --vintage-border-light: #e8e8e8;
+  }
+}
+
+/* Custom cursor with proper positioning */
+.custom-cursor {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>')
+    0 0, auto;
+}
+
+.custom-cursor * {
+  cursor: inherit;
+}
+
+.custom-cursor button,
+.custom-cursor input,
+.custom-cursor a,
+.custom-cursor [role="button"] {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>')
+    0 0, pointer;
+}
+
+.dark .custom-cursor {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23000" stroke="%23FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>')
+    0 0, auto;
+}
+
+.dark .custom-cursor button,
+.dark .custom-cursor input,
+.dark .custom-cursor a,
+.dark .custom-cursor [role="button"] {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23000" stroke="%23FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>')
+    0 0, pointer;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Vintage color classes */
+  .bg-vintage-light {
+    background-color: var(--vintage-light);
+  }
+
+  .bg-vintage-dark {
+    background-color: var(--vintage-dark);
+  }
+
+  .bg-vintage-paper {
+    background-color: var(--vintage-paper);
+  }
+
+  .bg-vintage-paper-dark {
+    background-color: var(--vintage-paper-dark);
+  }
+
+  .bg-vintage-paper-hover {
+    background-color: var(--vintage-paper-hover);
+  }
+
+  .bg-vintage-paper-hover-dark {
+    background-color: var(--vintage-paper-hover-dark);
+  }
+
+  .text-vintage-text-dark {
+    color: var(--vintage-text-dark);
+  }
+
+  .text-vintage-text-light {
+    color: var(--vintage-text-light);
+  }
+
+  .text-vintage-text-muted {
+    color: var(--vintage-text-muted);
+  }
+
+  .text-vintage-text-muted-dark {
+    color: var(--vintage-text-muted-dark);
+  }
+
+  .border-vintage-border {
+    border-color: var(--vintage-border);
+  }
+
+  .border-vintage-border-dark {
+    border-color: var(--vintage-border-dark);
+  }
+
+  .border-vintage-border-light {
+    border-color: var(--vintage-border-light);
+  }
+
+  .border-t-vintage-text-dark {
+    border-top-color: var(--vintage-text-dark);
+  }
+
+  .border-t-vintage-text-light {
+    border-top-color: var(--vintage-text-light);
+  }
+
+  .focus\:border-vintage-text-dark:focus {
+    border-color: var(--vintage-text-dark);
+  }
+
+  .focus\:border-vintage-text-light:focus {
+    border-color: var(--vintage-text-light);
+  }
+}
+
+/* Ghibli-inspired background */
+.ghibli-background {
+  position: absolute;
+  inset: 0;
+  /* Distant mountains */
+  background: radial-gradient(ellipse 800px 200px at 20% 100%, rgba(180, 180, 180, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 600px 150px at 80% 100%, rgba(160, 160, 160, 0.12) 0%, transparent 50%), /* Rolling hills */
+    radial-gradient(ellipse 1200px 300px at 50% 100%, rgba(200, 200, 200, 0.08) 0%, transparent 60%), /* Soft clouds */
+    radial-gradient(ellipse 400px 100px at 30% 20%, rgba(220, 220, 220, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 80px at 70% 15%, rgba(210, 210, 210, 0.05) 0%, transparent 70%);
+}
+
+.dark .ghibli-background {
+  /* Distant mountains - darker */
+  background: radial-gradient(ellipse 800px 200px at 20% 100%, rgba(80, 80, 80, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 600px 150px at 80% 100%, rgba(60, 60, 60, 0.12) 0%, transparent 50%),
+    /* Rolling hills - darker */
+    radial-gradient(ellipse 1200px 300px at 50% 100%, rgba(100, 100, 100, 0.08) 0%, transparent 60%),
+    /* Soft clouds - darker */
+    radial-gradient(ellipse 400px 100px at 30% 20%, rgba(120, 120, 120, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 80px at 70% 15%, rgba(110, 110, 110, 0.05) 0%, transparent 70%);
+}
+
+/* Vintage grain overlay */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.01) 1px, transparent 1px);
+  background-size: 4px 4px, 6px 6px, 8px 8px;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
+
+.dark .grain-overlay {
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.008) 1px, transparent 1px);
+  mix-blend-mode: screen;
+  opacity: 0.4;
+}
+
+/* Custom scrollbar - vintage style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vintage-border);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--vintage-border-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vintage-text-muted);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--vintage-text-muted-dark);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Typography improvements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+p {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
+
+/* Subtle paper texture effect */
+.bg-vintage-paper,
+.bg-vintage-paper-dark {
+  position: relative;
+}
+
+.bg-vintage-paper::before,
+.bg-vintage-paper-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.005) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.003) 1px, transparent 1px);
+  background-size: 12px 12px, 16px 16px;
+  pointer-events: none;
+}
+
+.dark .bg-vintage-paper-dark::before {
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.008) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
+}
+
+/* Performance optimizations for large datasets */
+.space-y-8 > * {
+  contain: layout style;
+}
+
+/* Ensure scroll button stays in viewport */
+.fixed {
+  position: fixed !important;
+}
+
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+.sway {
+  display: inline-block;
+  animation: sway 3s ease-in-out infinite;
+}
